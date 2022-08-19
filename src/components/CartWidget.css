@@ -1,0 +1,7 @@
+.cartIcon{
+   padding: 20px;
+   color: white;
+}
+.cartIcon:hover{
+    color: blue;
+}

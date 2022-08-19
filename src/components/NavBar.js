@@ -12,6 +12,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
+import CartWidget from './CartWidget';
 
 const pages = ['Home', 'Productos'];
 const settings = ['Pefil', 'Cuenta', 'Logout'];
@@ -124,6 +125,8 @@ const ResponsiveAppBar = () => {
               </Button>
             ))}
           </Box>
+
+          <CartWidget/>
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
