@@ -12,7 +12,7 @@ function App() {
   return (    
     <div className="App">
       <NavBar></NavBar>
-      <ItemListContainer texto={itemList}/>
+      <ItemListContainer/>
     </div>
   );
 }
