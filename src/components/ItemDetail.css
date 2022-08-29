@@ -1,0 +1,45 @@
+.contenedor {
+  width: 70%;
+  margin: 2rem auto;
+  border: 1px solid gray;
+  border-radius: 10px;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.4);
+}
+
+.detalle {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.imagenDetalle {
+  width: 75%;
+  margin: auto;
+  align-items: center;
+}
+
+.contenido {
+  width: auto;
+  margin: auto;
+  text-align: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .contenedor {
+    width: 50vh;
+    align-items: center;
+    justify-content: center;
+  }
+  .imagenDetalle {
+    width: 50%;
+    margin-left: auto;
+  }
+  .contenido {
+    width: 50%;
+  }
+}

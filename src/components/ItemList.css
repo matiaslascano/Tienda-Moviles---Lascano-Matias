@@ -1,0 +1,4 @@
+.listaCelulares {
+  display: grid;
+  grid-template-columns: auto;
+}

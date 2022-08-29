@@ -1,22 +1,22 @@
-.contador{
-   
-    width: fit-content;
-    margin: auto;
-    padding: 1rem;
-    text-align: center;
+.contador {
+  width: fit-content;
+  margin: auto;
+  padding: 1rem;
+  text-align: center;
 }
 
-.botonSumaResta{
-    margin: 1rem;
-    width: 1rem;
+.botonSumaResta {
+  margin: 1rem;
+  width: 1rem;
 }
-.botonAgregarCarrito{
-    padding: 0.5rem;
-    background-color: #1976d2;
-    color: white;
-    font-weight: 700;
-    border: none;
-    border-radius: 10px;
-}.botonAgregarCarrito:hover{
-    background-color: #155ca3;
+.botonAgregarCarrito {
+  padding: 0.5rem;
+  background-color: #1976d2;
+  color: white;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+}
+.botonAgregarCarrito:hover {
+  background-color: #155ca3;
 }
