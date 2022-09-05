@@ -2,34 +2,40 @@ import { useEffect, useState } from "react";
 import ItemCount from "./ItemCount";
 import ItemList from "./ItemList";
 import "./ItemListContainer.css";
+import { useParams } from "react-router-dom";
 
 const celulares = [
   {
     id: 1,
     nombre: "Samsung Galaxy S22",
     imagen: "https://m.media-amazon.com/images/I/817aOXLoNpL._AC_SL1500_.jpg",
-    precio: "$150.000",
+    precio: "$215.999",
     stock: "5",
+    categoria: "alta",
   },
   {
     id: 2,
     nombre: "Iphone 13",
     imagen: "https://m.media-amazon.com/images/I/61D84NtVgVL.jpg",
-    precio: "$250.000",
+    precio: "$470.712",
     stock: "0",
+    categoria: "alta",
   },
   {
     id: 3,
     nombre: "Motorola Edge 30 Pro",
     imagen:
       "https://armoto.vtexassets.com/arquivos/ids/162452-800-auto?v=637922986159330000&width=800&height=auto&aspect=true",
-    precio: "$140.000",
+    precio: "$169.999",
     stock: "22",
+    categoria: "media",
   },
 ];
 
 const ItemListContainer = (props) => {
   const [data, setData] = useState([]);
+
+  const { categoriaId } = useParams();
 
   useEffect(() => {
     const getData = new Promise((resolve) => {
@@ -37,26 +43,24 @@ const ItemListContainer = (props) => {
         resolve(celulares);
       }, 2000);
     });
-    getData.then((res) => setData(res));
-  }, []);
+    if (categoriaId) {
+      getData.then((res) =>
+        setData(res.filter((celulares) => celulares.categoria === categoriaId))
+      );
+    } else {
+      getData.then((res) => setData(res));
+    }
+  }, [categoriaId]);
 
   const onAdd = (cantidad) => {
     console.log(`Agregaste ${cantidad} unidades.`);
   };
   return (
     <>
-      <ItemList data={data} />
+      <ItemList className="listaCelulares" data={data} />
       <ItemCount initial={1} stock={4} onAdd={onAdd} />
     </>
   );
 };
-
-/* const style = {
-  color: "blue",
-  width: "100%",
-  display: "flex",
-  justifyContent: "center",
-  marginTop: "10px",
-}; */
 
 export default ItemListContainer;

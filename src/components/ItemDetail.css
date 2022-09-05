@@ -1,5 +1,5 @@
 .contenedor {
-  width: 70%;
+  width: 100%;
   margin: 2rem auto;
   border: 1px solid gray;
   border-radius: 10px;
@@ -9,8 +9,7 @@
 }
 
 .detalle {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin: 3rem auto;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
