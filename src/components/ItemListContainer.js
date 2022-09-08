@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ItemCount from "./ItemCount";
+
 import ItemList from "./ItemList";
 import "./ItemListContainer.css";
 import { useParams } from "react-router-dom";
@@ -52,13 +52,9 @@ const ItemListContainer = (props) => {
     }
   }, [categoriaId]);
 
-  const onAdd = (cantidad) => {
-    console.log(`Agregaste ${cantidad} unidades.`);
-  };
   return (
     <>
       <ItemList className="listaCelulares" data={data} />
-      <ItemCount initial={1} stock={4} onAdd={onAdd} />
     </>
   );
 };

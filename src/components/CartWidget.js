@@ -1,13 +1,7 @@
 import "./CartWidget.css";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import { IconButton } from "@mui/material";
 
 const CartWidget = () => {
-  return (
-    <IconButton>
-      <ShoppingCartIcon className="cartIcon" />
-    </IconButton>
-  );
+  return <h3>Carrito</h3>;
 };
 
 export default CartWidget;
