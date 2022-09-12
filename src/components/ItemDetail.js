@@ -2,11 +2,14 @@ import React, { useEffect, useState } from "react";
 import "./ItemDetail.css";
 import ItemCount from "./ItemCount";
 import { Link } from "react-router-dom";
+import { useCartContext } from "../CartContext";
 
 const ItemDetail = ({ data }) => {
   const [cantidad, setEnviarCarrito] = useState(false);
+  const { addProduct } = useCartContext();
   const onAdd = (cantidad) => {
     setEnviarCarrito(cantidad);
+    addProduct(data, cantidad);
   };
   return (
     <div className="contenedor">
