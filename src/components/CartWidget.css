@@ -1,7 +1,11 @@
-.cartIcon {
+/* /* .cartIcon {
   padding: 20px;
   color: white;
-}
-.cartIcon:hover {
+} */
+/* .cartIcon:hover {
   color: blue;
+}
+ */
+.MuiIcon-colorPrimary {
+  color: white;
 }

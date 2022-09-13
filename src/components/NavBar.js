@@ -1,10 +1,13 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./NavBar.css";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { useCartContext } from "../CartContext";
+import CartWidget from "./CartWidget";
 
 const NavBar = () => {
+  const { totalProductos } = useCartContext();
   return (
     <div className="navbar">
       <ul className="navbarLeft">
@@ -22,7 +25,8 @@ const NavBar = () => {
         </NavLink>
       </ul>
       <div className="navbarRight">
-        <ShoppingCartIcon className="navbarCart" alt="cart" />
+        <CartWidget />
+
         <AccountCircleIcon className="navbarUser" alt="user" fontSize="large" />
       </div>
     </div>
