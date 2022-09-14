@@ -1,49 +1,17 @@
 import React, { useState, useEffect } from "react";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
-
-const celulares = [
-  {
-    id: 1,
-    nombre: "Samsung Galaxy S22",
-    imagen: "https://m.media-amazon.com/images/I/817aOXLoNpL._AC_SL1500_.jpg",
-    precio: 215.999,
-    stock: 5,
-    categoria: "alta",
-  },
-  {
-    id: 2,
-    nombre: "Iphone 13",
-    imagen: "https://m.media-amazon.com/images/I/61D84NtVgVL.jpg",
-    precio: 470.712,
-    stock: 0,
-    categoria: "alta",
-  },
-  {
-    id: 3,
-    nombre: "Motorola Edge 30 Pro",
-    imagen:
-      "https://armoto.vtexassets.com/arquivos/ids/162452-800-auto?v=637922986159330000&width=800&height=auto&aspect=true",
-    precio: 169.999,
-    stock: 22,
-    categoria: "media",
-  },
-];
+import { getFirestore, doc, getDoc } from "firebase/firestore";
 
 export const ItemDetailContainer = () => {
   const [data, setData] = useState({});
   const { detalleId } = useParams();
 
   useEffect(() => {
-    const getData = new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(celulares);
-      }, 2000);
-    });
-    getData.then((res) =>
-      setData(res.find((celulares) => celulares.id === parseInt(detalleId)))
-    );
-  }, [detalleId]);
+    const querydb = getFirestore();
+    const queryDoc = doc(querydb, "items", detalleId);
+    getDoc(queryDoc).then((res) => setData({ id: res.id, ...res.data() }));
+  }, []);
 
   return <ItemDetail data={data} />;
 };

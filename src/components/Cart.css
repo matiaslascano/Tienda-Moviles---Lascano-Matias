@@ -28,3 +28,10 @@
   font-style: none;
   color: blue;
 }
+.vaciarCarrito {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  font-size: 1.2rem;
+}

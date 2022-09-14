@@ -5,7 +5,7 @@ import ItemCart from "./ItemCart";
 import "./Cart.css";
 
 const Cart = () => {
-  const { cart, totalPrecio } = useCartContext();
+  const { cart, totalPrecio, clearCart } = useCartContext();
 
   if (cart.length === 0) {
     return (
@@ -25,6 +25,9 @@ const Cart = () => {
       {cart.map((product) => (
         <ItemCart key={product.id} product={product} />
       ))}
+      <button className="vaciarCarrito" onClick={clearCart}>
+        Vaciar Carrito
+      </button>
       <p className="precioTotal">Total: ${totalPrecio()}</p>
     </>
   );

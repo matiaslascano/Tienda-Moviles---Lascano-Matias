@@ -19,7 +19,10 @@ const ItemDetail = ({ data }) => {
           <h2>{data.nombre}</h2>
           <h4>{data.precio}</h4>
           {cantidad ? (
-            <Link to="/cart">Terminar Compra</Link>
+            <div className="links">
+              <Link to="/">Continuar Comprando</Link>
+              <Link to="/cart">Terminar Compra</Link>
+            </div>
           ) : (
             <ItemCount initial={0} stock={data.stock} onAdd={onAdd} />
           )}
