@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Tienda-Moviles---Lascano-Matias/static/css/main.a187cbc1.css",
+    "main.js": "/Tienda-Moviles---Lascano-Matias/static/js/main.b42577a2.js",
+    "static/js/787.4148334b.chunk.js": "/Tienda-Moviles---Lascano-Matias/static/js/787.4148334b.chunk.js",
+    "static/media/videoCover.mp4": "/Tienda-Moviles---Lascano-Matias/static/media/videoCover.254f760619d75117e307.mp4",
+    "index.html": "/Tienda-Moviles---Lascano-Matias/index.html",
+    "main.a187cbc1.css.map": "/Tienda-Moviles---Lascano-Matias/static/css/main.a187cbc1.css.map",
+    "main.b42577a2.js.map": "/Tienda-Moviles---Lascano-Matias/static/js/main.b42577a2.js.map",
+    "787.4148334b.chunk.js.map": "/Tienda-Moviles---Lascano-Matias/static/js/787.4148334b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a187cbc1.css",
+    "static/js/main.b42577a2.js"
+  ]
+}
